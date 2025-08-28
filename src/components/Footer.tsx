@@ -7,7 +7,7 @@ const Footer: React.FC = () => {
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="text-center md:text-left mb-4 md:mb-0">
             <p className="text-gray-400">
-              © 2024 Portfolio. Made with ❤️ using React & TypeScript
+              © 2025 Portfolio. Made with ❤️ using React & TypeScript
             </p>
           </div>
           
@@ -23,7 +23,7 @@ const Footer: React.FC = () => {
               맨 위로
             </a>
             <a 
-              href="https://github.com/yourusername"
+              href="https://github.com/ajm445"
               target="_blank"
               rel="noopener noreferrer"
               className="text-gray-400 hover:text-primary transition-colors"
