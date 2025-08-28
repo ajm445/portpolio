@@ -13,10 +13,11 @@ interface TunaCanData {
 
 interface TunaCanManagerProps {
   catPosition: Position
+  catSize: { width: number; height: number }
   onCatEatTuna?: () => void
 }
 
-const TunaCanManager = ({ catPosition, onCatEatTuna }: TunaCanManagerProps) => {
+const TunaCanManager = ({ catPosition, catSize, onCatEatTuna }: TunaCanManagerProps) => {
   const [tunaCans, setTunaCans] = useState<TunaCanData[]>([])
   const spawnTimeoutRef = useRef<NodeJS.Timeout | null>(null)
 
@@ -24,7 +25,9 @@ const TunaCanManager = ({ catPosition, onCatEatTuna }: TunaCanManagerProps) => {
   const checkCollisions = () => {
     tunaCans.forEach(tuna => {
       const distance = Math.abs(catPosition.x - tuna.position.x)
-      if (distance < 42) { // Cat width (60px) + Tuna width (24px) / 2
+      // Distance from cat's edge (center + half width) + 25px fixed distance
+      const collisionDistance = (catSize.width / 2) + 25
+      if (distance < collisionDistance) {
         handleTunaEaten(tuna.id)
         onCatEatTuna?.()
       }
@@ -40,7 +43,7 @@ const TunaCanManager = ({ catPosition, onCatEatTuna }: TunaCanManagerProps) => {
     let x: number
     do {
       x = Math.random() * (windowWidth - tunaWidth)
-    } while (Math.abs(x - catPosition.x) < catWidth + 50) // Keep some distance from cat
+    } while (Math.abs(x - catPosition.x) < catSize.width + 50) // Keep some distance from cat
     
     const newTuna: TunaCanData = {
       id: `tuna-${Date.now()}-${Math.random()}`,
@@ -70,7 +73,7 @@ const TunaCanManager = ({ catPosition, onCatEatTuna }: TunaCanManagerProps) => {
 
   useEffect(() => {
     checkCollisions()
-  }, [catPosition, tunaCans])
+  }, [catPosition, catSize, tunaCans])
 
   return (
     <>

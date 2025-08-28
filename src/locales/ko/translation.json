@@ -67,5 +67,14 @@
   "footer": {
     "copyright": "Portfolio. Made with ❤️ using React & TypeScript",
     "toTop": "맨 위로"
+  },
+  "cat": {
+    "resetButton": "🔄 고양이 리셋",
+    "resetButtonTitle": "고양이를 원래 크기로 되돌리기",
+    "status": {
+      "tunas": "참치캔",
+      "size": "크기",
+      "speed": "속도"
+    }
   }
 }

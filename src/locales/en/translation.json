@@ -67,5 +67,14 @@
   "footer": {
     "copyright": "Portfolio. Made with ❤️ using React & TypeScript",
     "toTop": "Back to Top"
+  },
+  "cat": {
+    "resetButton": "🔄 Reset Cat",
+    "resetButtonTitle": "Reset cat to original size",
+    "status": {
+      "tunas": "Tunas",
+      "size": "Size",
+      "speed": "Speed"
+    }
   }
 }

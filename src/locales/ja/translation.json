@@ -67,5 +67,14 @@
   "footer": {
     "copyright": "Portfolio. React & TypeScriptで❤️を込めて作成",
     "toTop": "トップへ"
+  },
+  "cat": {
+    "resetButton": "🔄 猫をリセット",
+    "resetButtonTitle": "猫を元のサイズに戻す",
+    "status": {
+      "tunas": "ツナ缶",
+      "size": "サイズ",
+      "speed": "スピード"
+    }
   }
 }
