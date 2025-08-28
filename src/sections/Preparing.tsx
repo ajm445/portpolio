@@ -33,8 +33,8 @@ const Preparing: React.FC = () => {
           </h1>
           
           <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
-            더 나은 서비스를 위해 열심히 준비하고 있습니다.<br />
-            조금만 기다려 주세요.
+            이 섹션은 현재 개발중입니다.<br />
+            더 나은 모습으로 찾아뵙겠습니다.
           </p>
           
           <div className="flex justify-center space-x-2 mb-8">
@@ -45,7 +45,7 @@ const Preparing: React.FC = () => {
           
           <div className="card inline-block">
             <p className="text-gray-400 mb-6">
-              빠른 시일 내에 멋진 콘텐츠로 찾아뵙겠습니다.
+              새로운 프로젝트와 기술들을 준비하고 있어요.
             </p>
             <Link 
               to="/" 
