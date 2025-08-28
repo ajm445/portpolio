@@ -19,7 +19,7 @@ interface TunaCanManagerProps {
 
 const TunaCanManager = ({ catPosition, catSize, onCatEatTuna }: TunaCanManagerProps) => {
   const [tunaCans, setTunaCans] = useState<TunaCanData[]>([])
-  const spawnTimeoutRef = useRef<NodeJS.Timeout | null>(null)
+  const spawnTimeoutRef = useRef<number | null>(null)
 
   // Check collision between cat and tuna cans
   const checkCollisions = () => {
@@ -37,7 +37,6 @@ const TunaCanManager = ({ catPosition, catSize, onCatEatTuna }: TunaCanManagerPr
   const spawnTunaCan = () => {
     const windowWidth = window.innerWidth
     const tunaWidth = 24
-    const catWidth = 60
     
     // Generate random position, avoiding cat's current position
     let x: number

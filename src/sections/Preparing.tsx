@@ -1,9 +1,9 @@
 import React from 'react';
-import { useTranslation } from 'react-i18next';
+// import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 
 const Preparing: React.FC = () => {
-  const { t } = useTranslation();
+  // const { t } = useTranslation();
 
   return (
     <section className="min-h-screen flex items-center justify-center section-padding">

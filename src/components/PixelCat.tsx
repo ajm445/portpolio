@@ -17,8 +17,8 @@ const PixelCat = () => {
   const [tunasEaten, setTunasEaten] = useState(0) // Number of tunas eaten
   const [speedFactor, setSpeedFactor] = useState(1) // Speed factor (1 = normal, lower = slower)
   const catRef = useRef<HTMLDivElement>(null)
-  const moveTimeoutRef = useRef<NodeJS.Timeout | null>(null)
-  const walkIntervalRef = useRef<NodeJS.Timeout | null>(null)
+  const moveTimeoutRef = useRef<number | null>(null)
+  const walkIntervalRef = useRef<number | null>(null)
 
   // Calculate current cat size based on tunas eaten
   const getCurrentCatSize = () => {
