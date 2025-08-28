@@ -1,0 +1,71 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "skills": "Skills",
+    "projects": "Projects",
+    "contact": "Contact"
+  },
+  "hero": {
+    "greeting": "Hello, I'm a",
+    "role": "Developer",
+    "description": "Prioritizing user experience above all,",
+    "description2": "Creating innovative web solutions",
+    "viewProjects": "View Projects",
+    "contact": "Contact Me"
+  },
+  "about": {
+    "title": "About",
+    "subtitle": "Me",
+    "heading": "Developer Introduction",
+    "description1": "Hello! I'm a frontend developer who pursues user-centered web development. I love learning new technologies and always strive to create better user experiences.",
+    "description2": "I have worked on various projects using technologies like React, TypeScript, and Node.js, and I value teamwork and continue to grow through continuous learning.",
+    "fastLearning": "Fast Learning",
+    "problemSolving": "Problem Solving",
+    "teamwork": "Teamwork",
+    "philosophy": "Development Philosophy",
+    "philosophyItem1": "Development that prioritizes user experience",
+    "philosophyItem2": "Writing clean and maintainable code",
+    "philosophyItem3": "Continuous learning and technology exploration",
+    "philosophyItem4": "Collaboration that values team communication"
+  },
+  "skills": {
+    "title": "Skills",
+    "subtitle": "& Technologies",
+    "frontend": "Frontend",
+    "backend": "Backend",
+    "tools": "Tools & Others",
+    "description": "I continuously learn new technologies and can quickly acquire and apply the skills needed for projects."
+  },
+  "projects": {
+    "title": "Projects",
+    "project1": {
+      "title": "Portfolio Website",
+      "description": "A personal portfolio website built with React and TypeScript. Applied responsive design and smooth scrolling."
+    },
+    "project2": {
+      "title": "Todo App",
+      "description": "A web application that allows users to manage their tasks. Implemented data storage using localStorage and drag-and-drop functionality."
+    },
+    "project3": {
+      "title": "Weather App",
+      "description": "A weather information web app using the OpenWeather API. Provides current location-based weather information and 5-day forecast."
+    }
+  },
+  "contact": {
+    "title": "Contact",
+    "subtitle": "Me",
+    "info": "Contact Information",
+    "socialLinks": "Social Links",
+    "sendMessage": "Send Message",
+    "name": "Name",
+    "email": "Email",
+    "message": "Message",
+    "send": "Send Message",
+    "messageSent": "Message sent successfully!"
+  },
+  "footer": {
+    "copyright": "Portfolio. Made with ❤️ using React & TypeScript",
+    "toTop": "Back to Top"
+  }
+}

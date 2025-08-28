@@ -1,0 +1,71 @@
+{
+  "nav": {
+    "home": "ホーム",
+    "about": "紹介",
+    "skills": "スキル",
+    "projects": "プロジェクト",
+    "contact": "連絡先"
+  },
+  "hero": {
+    "greeting": "こんにちは、",
+    "role": "開発者",
+    "description": "ユーザーエクスペリエンスを最優先に考え、",
+    "description2": "革新的なWebソリューションを作り上げています",
+    "viewProjects": "プロジェクトを見る",
+    "contact": "お問い合わせ"
+  },
+  "about": {
+    "title": "About",
+    "subtitle": "Me",
+    "heading": "開発者紹介",
+    "description1": "こんにちは！私はユーザー中心のWeb開発を追求するフロントエンド開発者です。新しい技術を学ぶことが好きで、常により良いユーザーエクスペリエンスを作るために努力しています。",
+    "description2": "React、TypeScript、Node.jsなどの技術を活用して様々なプロジェクトを進めており、チームワークを重視し、継続的な学習を通じて成長しています。",
+    "fastLearning": "迅速な学習能力",
+    "problemSolving": "問題解決能力",
+    "teamwork": "協力能力",
+    "philosophy": "開発哲学",
+    "philosophyItem1": "ユーザーエクスペリエンスを最優先に考える開発",
+    "philosophyItem2": "きれいで保守しやすいコード作成",
+    "philosophyItem3": "継続的な学習と技術探求",
+    "philosophyItem4": "チームとのコミュニケーションを重視する協力"
+  },
+  "skills": {
+    "title": "スキル",
+    "subtitle": "& テクノロジー",
+    "frontend": "フロントエンド",
+    "backend": "バックエンド",
+    "tools": "ツール & その他",
+    "description": "継続的な学習を通じて新しい技術を身につけており、プロジェクトに必要な技術を迅速に習得して適用できます。"
+  },
+  "projects": {
+    "title": "プロジェクト",
+    "project1": {
+      "title": "ポートフォリオWebサイト",
+      "description": "ReactとTypeScriptを活用して制作した個人ポートフォリオWebサイトです。レスポンシブデザインとスムーズスクロールを適用しました。"
+    },
+    "project2": {
+      "title": "Todoアプリ",
+      "description": "ユーザーがタスクを管理できるWebアプリケーションです。localStorageを活用したデータ保存とドラッグ＆ドロップ機能を実装しました。"
+    },
+    "project3": {
+      "title": "天気アプリ",
+      "description": "OpenWeather APIを活用した天気情報提供Webアプリです。現在地ベースの天気情報と5日間予報を提供します。"
+    }
+  },
+  "contact": {
+    "title": "お問い合わせ",
+    "subtitle": "",
+    "info": "連絡先情報",
+    "socialLinks": "ソーシャルリンク",
+    "sendMessage": "メッセージを送る",
+    "name": "名前",
+    "email": "メール",
+    "message": "メッセージ",
+    "send": "メッセージを送信",
+    "messageSent": "メッセージが送信されました！"
+  },
+  "footer": {
+    "copyright": "Portfolio. React & TypeScriptで❤️を込めて作成",
+    "toTop": "トップへ"
+  }
+}
