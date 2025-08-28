@@ -9,7 +9,28 @@
   }
   
   body {
-    @apply font-montserrat bg-dark text-light;
+    @apply font-montserrat text-light;
+    background: 
+      radial-gradient(circle at 20% 80%, rgba(120, 119, 198, 0.15) 0%, transparent 50%),
+      radial-gradient(circle at 80% 20%, rgba(255, 119, 198, 0.15) 0%, transparent 50%),
+      radial-gradient(circle at 40% 40%, rgba(120, 119, 198, 0.1) 0%, transparent 50%),
+      linear-gradient(135deg, #0f0f23 0%, #1a1a3a 50%, #0f0f23 100%);
+    background-attachment: fixed;
+  }
+  
+  body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: 
+      linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px),
+      linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px);
+    background-size: 50px 50px;
+    pointer-events: none;
+    z-index: -1;
   }
 }
 
@@ -28,5 +49,56 @@
   
   .btn-primary {
     @apply bg-primary hover:bg-primary/80 text-white px-6 py-3 rounded-lg font-medium transition-colors;
+  }
+  
+  .particles {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1;
+  }
+  
+  .particle {
+    position: absolute;
+    color: rgba(120, 119, 198, 0.7);
+    font-family: 'Courier New', monospace;
+    font-size: 18px;
+    font-weight: bold;
+    animation: floatCode 12s ease-in-out infinite;
+    user-select: none;
+    text-shadow: 0 0 10px rgba(120, 119, 198, 0.3);
+  }
+  
+  .particle:nth-child(1) { top: 15%; left: 10%; animation-delay: 0s; }
+  .particle:nth-child(2) { top: 25%; left: 85%; animation-delay: 2s; }
+  .particle:nth-child(3) { top: 65%; left: 15%; animation-delay: 4s; }
+  .particle:nth-child(4) { top: 75%; left: 75%; animation-delay: 6s; }
+  .particle:nth-child(5) { top: 35%; left: 65%; animation-delay: 8s; }
+  .particle:nth-child(6) { top: 55%; left: 25%; animation-delay: 10s; }
+  .particle:nth-child(7) { top: 45%; left: 90%; animation-delay: 1s; }
+  .particle:nth-child(8) { top: 85%; left: 45%; animation-delay: 3s; }
+  .particle:nth-child(9) { top: 5%; left: 55%; animation-delay: 5s; }
+  .particle:nth-child(10) { top: 95%; left: 5%; animation-delay: 7s; }
+  
+  @keyframes floatCode {
+    0%, 100% {
+      transform: translateY(0px) translateX(0px) rotate(0deg);
+      opacity: 0.6;
+    }
+    25% {
+      transform: translateY(-30px) translateX(20px) rotate(5deg);
+      opacity: 0.9;
+    }
+    50% {
+      transform: translateY(-60px) translateX(0px) rotate(-5deg);
+      opacity: 0.7;
+    }
+    75% {
+      transform: translateY(-30px) translateX(-20px) rotate(3deg);
+      opacity: 0.9;
+    }
   }
 }
