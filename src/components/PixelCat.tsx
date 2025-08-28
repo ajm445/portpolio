@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from 'react'
+import TunaCanManager from './TunaCanManager'
 
 interface Position {
   x: number
@@ -47,6 +48,7 @@ const PixelCat = () => {
         // Determine direction and move
         const walkDirection = targetX > currentX ? 'right' : 'left'
         setDirection(walkDirection)
+        console.log(`Moving ${walkDirection}, from ${currentX} to ${targetX}`)
         
         const nextX = walkDirection === 'right' 
           ? Math.min(currentX + stepSize, targetX)
@@ -58,7 +60,7 @@ const PixelCat = () => {
   }
 
   const handleMouseClick = (event: MouseEvent) => {
-    const targetX = Math.max(0, Math.min(event.clientX - 24, window.innerWidth - 48))
+    const targetX = Math.max(0, Math.min(event.clientX - 30, window.innerWidth - 60))
     setIsUserControlled(true)
     
     // Clear random movement timeout
@@ -74,7 +76,7 @@ const PixelCat = () => {
       if (isUserControlled) return
 
       const windowWidth = window.innerWidth
-      const catSize = 48
+      const catSize = 60
 
       const newX = Math.random() * (windowWidth - catSize)
       walkToPosition(newX)
@@ -104,14 +106,14 @@ const PixelCat = () => {
     if (!isUserControlled) {
       const resumeRandomMovement = () => {
         const windowWidth = window.innerWidth
-        const catSize = 48
+        const catSize = 60
         const newX = Math.random() * (windowWidth - catSize)
         walkToPosition(newX)
         
         moveTimeoutRef.current = setTimeout(() => {
           const moveRandomly = () => {
             if (isUserControlled) return
-            const newX = Math.random() * (windowWidth - catSize)
+            const newX = Math.random() * (windowWidth - 60)
             walkToPosition(newX)
             moveTimeoutRef.current = setTimeout(moveRandomly, Math.random() * 5000 + 4000)
           }
@@ -125,17 +127,29 @@ const PixelCat = () => {
   }, [isUserControlled])
 
   return (
-    <div
-      ref={catRef}
-      className={`pixel-cat ${direction} ${isMoving ? 'moving' : 'idle'}`}
-      style={{
-        left: `${position.x}px`,
-      }}
-    >
-      <div className="cat-sprite">
-        <div className="cat-body"></div>
+    <>
+      <div
+        ref={catRef}
+        className={`pixel-cat ${direction} ${isMoving ? 'moving' : 'idle'}`}
+        style={{
+          left: `${position.x}px`,
+        }}
+      >
+        <img 
+          src="/images/blackcat.png" 
+          alt="Pixel Cat" 
+          className="cat-image"
+          draggable={false}
+        />
       </div>
-    </div>
+      <TunaCanManager 
+        catPosition={{ x: position.x, y: position.y }}
+        onCatEatTuna={() => {
+          // Optional: Add eating animation or sound effect here
+          console.log('Cat ate tuna! 🐱')
+        }}
+      />
+    </>
   )
 }
 
